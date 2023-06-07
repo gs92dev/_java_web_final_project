@@ -26,7 +26,7 @@ public class CityService {
     public void deleteCity(Integer cityId){
         cityRepository.deleteById(cityId);
     }
-    public void put(City city){
+    public void update(City city){
         Integer id = city.getId();
         City foundCity = cityRepository.getReferenceById(id);
         foundCity.setName(city.getName());

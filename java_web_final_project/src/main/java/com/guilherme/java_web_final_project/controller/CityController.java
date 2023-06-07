@@ -27,6 +27,9 @@ public class CityController {
     public void deleteCity(@PathVariable Integer id){
         this.cityService.deleteCity(id);
     }
-    //Create the PUT
 
+    @PutMapping
+    public void update(@RequestBody City city){
+        this.cityService.update(city);
+    }
 }
